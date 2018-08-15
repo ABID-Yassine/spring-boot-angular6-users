@@ -1,0 +1,51 @@
+
+.example-header-image {
+  background-image: url('https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/user_male2-512.png');
+  background-size: cover;
+}
+
+.example-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.example-container > * {
+  width: 100%;
+}
+
+table {
+  width: 100%;
+}
+
+.grid-container {
+  margin-top: 16px;
+}
+
+.row-table {
+  cursor: pointer;
+}
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.done {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: white;
+  z-index: 100000;
+}
+
+.mat-form-field {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  text-align: left;
+}

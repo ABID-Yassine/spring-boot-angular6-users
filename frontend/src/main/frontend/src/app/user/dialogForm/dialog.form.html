@@ -1,0 +1,52 @@
+<h1 mat-dialog-title>{{data.name}}</h1>
+
+<form [formGroup]="UserForm" (ngSubmit)="onFormSubmit(UserForm.value)">
+  <div mat-dialog-content>
+
+    <!--<mat-form-field class="example-full-width">-->
+      <!--<input matInput placeholder="id" formControlName="id" disabled >-->
+    <!--</mat-form-field>-->
+
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="First Name" formControlName="firstName"
+             [errorStateMatcher]="matcher">
+      <mat-error>
+        <span
+          *ngIf="!UserForm.get('firstName').valid && UserForm.get('firstName').touched">Please enter First Name User</span>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Last Name" formControlName="lastName"
+             [errorStateMatcher]="matcher">
+      <mat-error>
+        <span
+          *ngIf="!UserForm.get('lastName').valid && UserForm.get('lastName').touched">Please enter Last Name User</span>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <input matInput type="email" formControlName="email" class="form-control" placeholder="Email"
+             [errorStateMatcher]="matcher"/>
+      <mat-error>
+        <span *ngIf="!UserForm.get('email').valid && UserForm.get('email').touched">Please enter User Email</span>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <input matInput type="password" formControlName="password" class="form-control" placeholder="Password"
+             [errorStateMatcher]="matcher"/>
+      <mat-error>
+        <span
+          *ngIf="!UserForm.get('password').valid && UserForm.get('password').touched">Please enter User Password</span>
+      </mat-error>
+    </mat-form-field>
+
+  </div>
+  <mat-dialog-actions>
+    <button mat-raised-button color="primary"  [disabled]="!UserForm.valid" cdkFocusInitial>Save
+      <mat-icon>save</mat-icon>
+    </button>
+  </mat-dialog-actions>
+
+</form>
