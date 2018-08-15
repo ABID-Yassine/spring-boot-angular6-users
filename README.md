@@ -11,7 +11,7 @@ You should install the following software on your own computer.
 * JDK 1.8
 * Maven
 * MySQL
-* Node.js (Node 6.9.0 or higher, together with NPM 3 or higher)
+* Node.js (Node 10.7.0 or higher, together with NPM 3 or higher)
 * Angular CLI
 
 Create a database named "test" in MySQL and import "test.sql" file (script folder) into it. After that, configure username and password
