@@ -25,13 +25,6 @@ public class UserController {
 	@RequestMapping(method = RequestMethod.POST, consumes="application/json")
 	@PostMapping
 	public List<User> add(@RequestBody User user) {
-
-		String result;
-		if (user.getId() == null) {
-			result = " insere";
-		} else {
-			result = " modifie";
-		}
 		userDAO.saveAndFlush(user);
 		return list();
 	}
@@ -43,7 +36,6 @@ public class UserController {
 
 	@DeleteMapping("/{id}")
 	public List<User> delete(@PathVariable Integer id) {
-		User p = userDAO.findOne(id);
 		userDAO.delete(id);
 		return list();
 	}
